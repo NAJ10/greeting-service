@@ -8,5 +8,8 @@ lazy val root = (project in file(".")).
       version      := "0.1.0-SNAPSHOT"
     )),
     name := "greeting-service",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies ++= Seq (
+      http4sServer,
+      scalaTest % Test
+    )
   )
